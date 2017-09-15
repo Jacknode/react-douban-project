@@ -1,0 +1,62 @@
+img {
+  float: right;
+  width: 5rem;
+  height: 5rem;
+}
+.card {
+  padding: 1rem 1rem 1rem 0;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  overflow: hidden;
+  border-bottom: 1px solid #f2f2f2;
+}
+.card .cardLeft {
+  width: 11.5rem;
+  float: left;
+}
+.card .cardLeft p:nth-of-type(1) {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.card .cardLeft p:nth-of-type(2) {
+  padding: 0.25rem 0;
+  font-size: 0.7rem;
+  color: #aaa;
+}
+.card .cardRight {
+  float: right;
+}
+.card .itemList {
+  padding-top: 0.5rem;
+  clear: both;
+}
+.card .itemList span {
+  color: #ccd0d4;
+  font-size: 0.6rem;
+}
+.card .itemList span:nth-of-type(1) {
+  float: left;
+}
+.card .itemList span:nth-of-type(2) {
+  float: right;
+}
+.addWidth {
+  width: 100%;
+  float: left;
+}
+.addWidth p:nth-of-type(1) {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.addWidth p:nth-of-type(2) {
+  padding: 0.25rem 0;
+  font-size: 0.7rem;
+  color: #aaa;
+}
+.ico {
+  width: 100%;
+  height: 5rem;
+}
+.positions {
+  margin-bottom: -10rem !important;
+}
