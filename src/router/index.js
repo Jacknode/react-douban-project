@@ -3,14 +3,9 @@ import Home from './Home'
 import Movie from './Movie'
 import Book from './Book'
 import '../styles/css/App.css'
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
-import * as actionsCreators from '../stores/actions/index';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+
 class App extends React.Component {
-  constructor(props, context) {
-    super(props, context)
-  }
   render() {
     return (
       <Router>
@@ -73,5 +68,4 @@ class App extends React.Component {
     )
   }
 }
-App = connect(state => state, dispatch => bindActionCreators(actionsCreators, dispatch))(App);
 export default App

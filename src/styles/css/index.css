@@ -1,53 +1,59 @@
-input,
-textarea {
+input, textarea {
   margin: 0;
   padding: 0;
   border: none;
   outline: none;
 }
+
 textarea {
   resize: none;
   overflow: auto;
 }
+
 em {
   font-style: normal;
 }
+
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-h1,
-p,
-h2 {
+
+h1, p, h2 {
   margin: 0;
   font-weight: normal;
 }
-a,
-input {
+
+a, input {
   -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
 }
+
 img {
   border: none;
   vertical-align: top;
 }
-body,
-html {
+
+body, html {
   position: relative;
   margin: 0;
   height: 100%;
   overflow: hidden;
 }
+
 img {
   vertical-align: top;
 }
+
 a {
   text-decoration: none;
   color: #aaa;
 }
+
 .clear {
   clear: both;
 }
+
 header {
   position: relative;
   height: 3rem;
@@ -55,15 +61,18 @@ header {
   line-height: 3rem;
   border-bottom: 1px solid #f3f3f3;
 }
+
 header .header {
   padding: 0 1rem;
 }
+
 header .header a {
   float: left;
   width: 2.7rem;
   display: inline-block;
   text-align: center;
 }
+
 header .header a.active {
   display: inline-block;
   float: left;
@@ -72,53 +81,65 @@ header .header a.active {
   color: #5eb61b;
   font-weight: bold;
 }
+
 header .header a.blue {
   color: #368be5;
   font-size: 1rem;
 }
+
 header .header a.Earth {
   color: #997963;
   font-size: 1rem;
 }
+
 header .header a.yellow {
   color: #dca732;
   font-size: 1rem;
 }
+
 header .header a.danblue {
   color: #5ab5c9;
   font-size: 1rem;
 }
+
 header .header a i {
   color: #5cb00a;
   font-size: 1rem;
 }
+
 .wrapContent {
   margin-bottom: 0.5rem;
   height: 15.2rem;
   padding: 0 1rem;
 }
+
 .wrapContent .head {
   height: 3rem;
   line-height: 3rem;
 }
+
 .wrapContent .head span:nth-of-type(1) {
   float: left;
 }
+
 .wrapContent .head a {
   float: right;
   color: #5eb61b;
 }
+
 .wrapContent .picAll {
   width: 100%;
   height: 11.9rem;
   position: relative;
   overflow: hidden;
 }
+
 .wrapContent .picAll .pics {
   position: absolute;
   height: 100%;
   z-index: 2;
 }
+
 .wrapContent .picAll .pics a {
   float: left;
   display: inline-block;
@@ -127,10 +148,12 @@ header .header a i {
   position: relative;
   height: 100%;
 }
+
 .wrapContent .picAll .pics a img {
   width: 6rem;
   height: 9.1rem;
 }
+
 .wrapContent .picAll .pics a p:nth-of-type(1) {
   text-align: center;
   padding-top: 0.5rem;
@@ -139,7 +162,9 @@ header .header a i {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  width: 100%;
 }
+
 .wrapContent .picAll .pics a p:nth-of-type(2) {
   vertical-align: top;
   padding-left: 0.7rem;
@@ -147,57 +172,70 @@ header .header a i {
   padding-top: .13rem;
   float: left;
 }
+
 .wrapContent .picAll .pics a p:nth-of-type(2) i {
   float: left;
   font-size: 0.6rem;
   margin-right: 0.05rem;
 }
+
 .wrapContent .picAll .pics a span {
   padding-left: 0.15rem;
   font-size: 0.6rem;
   float: left;
   vertical-align: top;
 }
+
 .wrapContent .picAll .pics a i.active {
   color: #f6b633;
 }
+
 .wrapNav {
   margin-top: 2rem;
   width: 100%;
   height: 22.5rem;
 }
+
 .wrapNav .nav {
   line-height: 2.5rem;
   height: 2.5rem;
   padding-left: 1rem;
 }
+
 .wrapNav .nav .card {
   height: 2.5rem;
   border-top: 1px solid #f3f3f3;
 }
+
 .wrapNav .nav .card a {
   height: 100%;
   display: inline-block;
   width: 9.3rem;
 }
+
 .wrapNav .nav .card a span:nth-of-type(1) {
   color: #5eb61b;
   float: left;
   padding-left: 0.5rem;
 }
+
 .wrapNav .nav .card a span:nth-of-type(2) {
   float: right;
   padding-right: 0.5rem;
 }
+
 .wrapNav .nav .card a span:nth-of-type(2) i {
   font-size: 1.5rem;
 }
+
 .wrapNav .nav .card a:nth-of-type(1) {
-  border-right: 1px solid #f3f3f3  ;
+  border-right: 1px solid #f3f3f3;
 }
+
 .wrapNav .nav .card:last-child {
   border-bottom: 1px solid #f3f3f3;
 }
+
 #wrap {
   position: absolute;
   top: 3rem;
@@ -207,25 +245,31 @@ header .header a i {
   width: 100%;
   overflow: hidden;
 }
+
 #wrap .MwrapContent {
   margin-bottom: 0.5rem;
   padding: 0 1rem;
 }
+
 #wrap .MwrapContent .head {
   height: 3rem;
   line-height: 3rem;
 }
+
 #wrap .MwrapContent .head span:nth-of-type(1) {
   float: left;
 }
+
 #wrap .MwrapContent .head a {
   float: right;
   color: #5eb61b;
 }
+
 #wrap .MorePics {
   width: 100%;
   overflow: hidden;
 }
+
 #wrap .MorePics a {
   float: left;
   display: inline-block;
@@ -235,10 +279,12 @@ header .header a i {
   position: relative;
   height: 100%;
 }
+
 #wrap .MorePics a img {
   width: 5.5rem;
   height: 8.1rem;
 }
+
 #wrap .MorePics a p:nth-of-type(1) {
   font-size: 0.7rem;
   white-space: nowrap;
@@ -248,69 +294,86 @@ header .header a i {
   padding-top: 0.5rem;
   margin-bottom: 0.25rem;
 }
+
 #wrap .MorePics a p:nth-of-type(2) {
   vertical-align: top;
   padding-left: 0.3rem;
 }
+
 #wrap .MorePics a p:nth-of-type(2) i {
   float: left;
   font-size: 0.6rem;
   margin-right: 0.05rem;
 }
+
 #wrap .MorePics a span {
   padding-left: 0.25rem;
   font-size: 0.6rem;
   vertical-align: top;
 }
+
 #wrap .MorePics a i.active {
   color: #f6b633;
 }
+
 .detailContent {
   padding: 1rem;
   overflow: hidden;
 }
+
 .detailContent h2 {
   padding-bottom: 0.5rem;
 }
+
 .detailContent .left {
   float: left;
   width: 10rem;
 }
+
 .detailContent .left .icons {
   padding-right: 0.5rem;
 }
+
 .detailContent .left .icons i {
   float: left;
 }
+
 .detailContent .left .icons i.active {
   color: #f6b633;
 }
+
 .detailContent .left p:nth-of-type(1) {
   padding-top: 0.5rem;
 }
+
 .detailContent .right {
   float: right;
   width: 6.5rem;
 }
+
 .detailContent .right img {
   width: 100%;
   height: 10rem;
 }
+
 .detailContent .title {
   color: #aaa;
   padding: 2rem 0;
 }
+
 .detailContent .picAll {
   width: 100%;
   height: 12.2rem;
   position: relative;
   overflow: hidden;
 }
+
 .detailContent .picAll .pics {
   position: absolute;
   height: 100%;
   z-index: 2;
 }
+
 .detailContent .picAll .pics a {
   float: left;
   display: inline-block;
@@ -319,24 +382,29 @@ header .header a i {
   position: relative;
   height: 100%;
 }
+
 .detailContent .picAll .pics a img {
   width: 6rem;
   height: 9.1rem;
 }
+
 .detailContent .picAll .pics a p:nth-of-type(1) {
   text-align: center;
   padding-top: 0.5rem;
   margin-bottom: 0.25rem;
 }
+
 .detailContent .picAll .pics a p:nth-of-type(2) {
   vertical-align: top;
   padding-left: 0.7rem;
 }
+
 .detailContent .picAll .pics a p:nth-of-type(2) i {
   float: left;
   font-size: 0.6rem;
   margin-right: 0.05rem;
 }
+
 .detailContent .picAll .pics a span {
   position: absolute;
   right: 0.25rem;
@@ -344,57 +412,70 @@ header .header a i {
   font-size: 0.6rem;
   vertical-align: top;
 }
+
 .detailContent .picAll .pics a i.active {
   color: #f6b633;
 }
+
 .detailContent .Essay {
   margin-bottom: 1rem;
   overflow: hidden;
   padding: 1rem;
 }
+
 .detailContent .Essay .EssayLeft {
   float: left;
   width: 2.5rem;
   height: 2.5rem;
 }
+
 .detailContent .Essay .EssayLeft img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
+
 .detailContent .Essay .EssayRight {
   float: left;
   width: 13rem;
 }
+
 .detailContent .Essay .EssayRight .EssayHeader {
   line-height: 2rem;
   padding-left: 0.5rem;
 }
+
 .detailContent .Essay .EssayRight .EssayHeader span:nth-of-type(1) {
   float: left;
 }
+
 .detailContent .Essay .EssayRight .EssayHeader span:nth-of-type(2) {
   padding-left: 0.5rem;
   display: inline-block;
   line-height: 1.6rem;
   height: 1.6rem;
 }
+
 .detailContent .Essay .EssayRight .EssayHeader span:nth-of-type(2) i.active {
   padding-top: 0.3rem;
   color: #f6b633;
   float: left;
 }
+
 .detailContent .Essay .EssayRight .time {
   font-size: 0.7rem;
   color: #aaa;
   padding-left: 0.7rem;
 }
+
 .detailContent .Essay .EssayRight .content {
   padding-top: 0.5rem;
 }
+
 .detailContent .Essay .EssayRight .icon {
   color: #aaa;
 }
+
 .detailContent .Essay .EssayRight .icon span {
   padding-left: 0.5rem;
   font-size: 0.7rem;

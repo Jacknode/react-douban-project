@@ -3,28 +3,23 @@
  */
 import Obj from './m.touch'
 
-export default function () {
+export default function() {
   // 头部导航的动画
   // document.addEventListener('touchstart', function(e) {
   //   e.preventDefault();
   // });
   var navWrap = document.querySelectorAll('.picAll');
-  for(var i=0;i<navWrap.length;i++){
+  for (var i = 0; i < navWrap.length; i++) {
     tab(navWrap[i]);
   }
   function tab(obj) {
 
     var navs = obj.querySelector('.pics');
     var lis = navs.children;
-    if(lis.length){
-        var liW = Obj.css(lis[0], 'width');
-        Obj.css(navs, 'width', lis.length * liW);
-        Obj.mScroll({
-            wrap: obj,
-            dir: 'x',
-            over: 'none',
-            showBar: false
-        });
+    if (lis.length) {
+      var liW = Obj.css(lis[0], 'width') + 10;
+      Obj.css(navs, 'width', lis.length * liW);
+      Obj.mScroll({wrap: obj, dir: 'x', over: 'none', showBar: false});
     }
   }
 
@@ -36,5 +31,3 @@ export default function () {
   //   showBar: false
   // })
 }
-
-
