@@ -162,6 +162,7 @@ header .header a i {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  width: 100%;
 }
 
 .wrapContent .picAll .pics a p:nth-of-type(2) {
@@ -202,8 +203,8 @@ header .header a i {
 }
 
 .wrapNav .nav .card {
-  height: 2.5rem;
-  border-top: 1px solid #f3f3f3;
+  height: 2.5rem !important;
+  border-top: 1px solid #f3f3f3!important;
 }
 
 .wrapNav .nav .card a {
@@ -318,6 +319,7 @@ header .header a i {
 .detailContent {
   position: relative;
   background: #fff;
+  padding: 1rem
 }
 
 .detailContent h2 {

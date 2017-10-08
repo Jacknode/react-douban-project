@@ -203,8 +203,8 @@ header .header a i {
 }
 
 .wrapNav .nav .card {
-  height: 2.5rem;
-  border-top: 1px solid #f3f3f3;
+  height: 2.5rem !important;
+  border-top: 1px solid #f3f3f3!important;
 }
 
 .wrapNav .nav .card a {
@@ -234,16 +234,6 @@ header .header a i {
 
 .wrapNav .nav .card:last-child {
   border-bottom: 1px solid #f3f3f3;
-}
-
-#wrap {
-  position: absolute;
-  top: 3rem;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  overflow: hidden;
 }
 
 #wrap .MwrapContent {
@@ -317,8 +307,9 @@ header .header a i {
 }
 
 .detailContent {
-  padding: 1rem;
-  overflow: hidden;
+  position: relative;
+  background: #fff;
+  /*overflow: hidden;*/
 }
 
 .detailContent h2 {

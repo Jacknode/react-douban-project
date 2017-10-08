@@ -1,24 +1,36 @@
 import 'core-js/fn/object/assign';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
-import {Provider} from 'react-redux';
-// import route from './router/index'
-import store from './stores/index'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-// import 'styles/css/index.css'
-// import 'styles/css/font-awesome.min.css'
-// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import MyAwesomeReactComponent from './components/MyAwesomeReactComponent';
-// const App = () => (
-//   <MuiThemeProvider>
-//     <MyAwesomeReactComponent />
-//   </MuiThemeProvider>
-// );
+import {createStore, combineReducers, applyMiddleware} from 'redux'
+import {Provider} from 'react-redux'
 
-// Render the main component into the dom
+import createHistory from 'history/createBrowserHistory'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import App from './components/App'
+import Movie from './components/Movie'
+
+import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux'
+
+import reducers from './stores/reducers' // Or wherever you keep your reducers
+
+// Create a history of your choosing (we're using a browser history in this case)
+const history = createHistory()
+
+// Build the middleware for intercepting and dispatching navigation actions
+const middleware = routerMiddleware(history)
+
+// Add the reducer to your store on the `router` key
+// Also apply our middleware for navigating
+const store = createStore(combineReducers({
+  ...reducers,
+  router: routerReducer
+}), applyMiddleware(middleware))
+
+// Now you can dispatch navigation actions from anywhere!
+// store.dispatch(push('/foo'))
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Router>
   <App/>
-</Provider>, document.getElementById('app'));
+</Router>, document.getElementById('app'))

@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 class MoivePublic extends React.Component {
   constructor(props) {
@@ -11,8 +12,10 @@ class MoivePublic extends React.Component {
     }
     return arr;
   }
+  Actions() {
+    window.location.reload();
+  }
   render() {
-    console.log(this.props);
     const BannerList = this.props.BannerList;
     return (
       <div className="wrapContent">
@@ -22,10 +25,15 @@ class MoivePublic extends React.Component {
         </div>
         <div className="clear"></div>
         <div className="picAll">
-          <div className="pics">
+          <div className="pics" onClick={this.Actions}>
             {BannerList.length
               ? BannerList.map((item, index) => {
-                return <a href="javascript:;" key={index}>
+                return <Link key={index} to={{
+                  pathname: `/movieDetail/${item.id}`,
+                  state: {
+                    modal: true
+                  }
+                }}>
                   <img src={item.cover.url}/>
                   <p className="title">
                     {item.title}
@@ -41,13 +49,13 @@ class MoivePublic extends React.Component {
                       </p>
                     : ''}
                   {item.isOff
-                    ? <span>{item.rating.value}</span>
+                    ? <span>{item.rating.value.toFixed(1)}</span>
                     : <span style={{
                       paddingRight: '0.7rem'
                     }}>暂无评分</span>}
-                </a>
+                </Link>
               })
-              : <h1>加载中</h1>}
+              : <h2>加载中</h2>}
           </div>
         </div>
       </div>

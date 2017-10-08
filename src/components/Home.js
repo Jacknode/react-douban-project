@@ -3,9 +3,20 @@
  */
 import React from 'react'
 import JSONP from '../assets/js/JSONP'
-import iScroll from 'iscroll';
-import ReactIScroll from 'react-iscroll';
-import '../styles/css/Home.css'
+import Scroll from '../assets/js/HomeScroll'
+import '../styles/css/Home.less'
+import '../styles/css/HomeLoad.css'
+
+const wrap = {
+  position: 'absolute',
+  top: '3rem',
+  left: 0,
+  right: 0,
+  bottom: '3.3rem',
+  width: '100%',
+  overflow: 'hidden',
+  background: '#282828'
+}
 
 class Home extends React.Component {
   constructor(props) {
@@ -15,6 +26,9 @@ class Home extends React.Component {
     }
   }
   componentDidMount() {
+    Scroll(this);
+  }
+  componentWillMount() {
     this.getHomeList();
   }
   getHomeList() {
@@ -26,12 +40,13 @@ class Home extends React.Component {
   render() {
     var HomeList = this.state.HomeList
     return (
-
-      <ReactIScroll iScroll={iScroll} options={{
-        mouseWheel: true,
-        scrollbars: false
-      }}>
-        <div>
+      <div id="wrap" style={wrap}>
+        <div id="Home">
+          <div id="load">
+            <span className="loadImg"></span>
+            <span className="loadImg2"></span>
+            <span className="loadText">下拉刷新</span>
+          </div>
           {HomeList.map((item, i) => {
             return <div className="card" key={i}>
               <div className={item.target.cover_url
@@ -55,11 +70,13 @@ class Home extends React.Component {
               </div>
             </div>
           })}
-          <div style={{
-            height: '7rem'
-          }}></div>
+          <div id="footerLoad">
+            <span className="footLoadImg"></span>
+            <span className="footLoadImg2"></span>
+            <span className="footLoadText">加载更多</span>
+          </div>
         </div>
-      </ReactIScroll>
+      </div>
 
     )
   }
